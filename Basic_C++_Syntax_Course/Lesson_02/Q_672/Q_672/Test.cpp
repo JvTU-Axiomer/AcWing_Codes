@@ -3,28 +3,25 @@
 using namespace std;
 int main()
 {
-	double money;
-	cin >> money;
-	double ret;
-	if (money >= 0 && money <= 2000)
+	double salary;
+	cin >> salary;
+	double res = 0;
+	double y = 0;
+	if (salary > 2000)
 	{
-		cout << "Isento" << endl;
+		y = 3000;
+		if (salary <= 3000) y = salary;
+		res += (y - 2000) * 0.08;
 	}
-	else 
+	if (salary > 3000)
 	{
-		if (money >= 2000.01 && money <= 3000)
-		{
-			ret = (money - 2000) * 0.08;
-		}
-		else if (money >= 3000.01 && money <= 4500)
-		{
-			ret = 80 + (money - 3000) * 0.18;
-		}
-		else
-		{
-			ret = 80 + 270 + (money - 4500) * 0.28;
-		}
-		printf("R$ %.2lf\n", ret);
+		y = 4500;
+		if (salary <= 4500) y = salary;
+		res += (y - 3000) * 0.18;
 	}
+	if (salary > 4500)
+		res += (salary - 4500) * 0.28;
+	if (res == 0) printf("Isento\n");
+	else printf("R$ %.2lf\n", res);
 	return 0;
 }

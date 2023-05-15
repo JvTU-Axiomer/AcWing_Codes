@@ -42,6 +42,7 @@ int main()
 		b = B;
 		c = A;
 	}
+
 	if (a >= b + c)
 	{
 		cout << "NAO FORMA TRIANGULO" << endl;
@@ -63,7 +64,7 @@ int main()
 		{
 			cout << "TRIANGULO EQUILATERO" << endl;
 		}
-		if (a == b && a != c || a == c && a != b || b == c && a != b)
+		else if (a == b && a != c || a == c && a != b || b == c && a != b)
 		{
 			cout << "TRIANGULO ISOSCELES" << endl;
 		}

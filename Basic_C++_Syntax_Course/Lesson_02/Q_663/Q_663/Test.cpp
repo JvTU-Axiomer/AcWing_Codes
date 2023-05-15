@@ -6,51 +6,28 @@ int main()
 	int a, b, c;
 	int x, y, z;
 	cin >> a >> b >> c;
-	if (a > b && a > c)
+	x = a;
+	y = b;
+	z = c;
+	if (a > b)
 	{
-		if (b > c)
-		{
-			x = a;
-			y = b;
-			z = c;
-		}
-		else
-		{
-			x = a;
-			y = c;
-			z = b;
-		}
+		int t = a;
+		a = b;
+		b = t;
 	}
-	else if (b > a && b > c)
+	if (a > c)
 	{
-		if (a > c)
-		{
-			x = b;
-			y = a;
-			z = c;
-		}
-		else
-		{
-			x = b;
-			y = c;
-			z = a;
-		}
+		int t = a;
+		a = c;
+		c = t;
 	}
-	else if (c > a && c > b)
+	if (b > c)
 	{
-		if (a > b)
-		{
-			x = c;
-			y = a;
-			z = b;
-		}
-		else
-		{
-			x = c;
-			y = b;
-			z = a;
-		}
+		int t = b;
+		b = c;
+		c = t;
 	}
+	
 	cout << z << endl;
 	cout << y << endl;
 	cout << x << endl;
