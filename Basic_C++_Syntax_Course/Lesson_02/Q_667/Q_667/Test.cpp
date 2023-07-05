@@ -1,4 +1,4 @@
-#include <cstdio>
+﻿#include <cstdio>
 #include <iostream>
 using namespace std;
 int main()
@@ -17,5 +17,6 @@ int main()
 	{
 		printf("O JOGO DUROU 24 HORA(S)\n");
 	}
+
 	return 0;
 }

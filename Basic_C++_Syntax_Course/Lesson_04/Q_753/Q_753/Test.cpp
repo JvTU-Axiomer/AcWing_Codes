@@ -1,35 +1,27 @@
-#include <cstdio>
+﻿#include <cstdio>
 #include <iostream>
 using namespace std;
+#define M 100
 int main()
 {
-	int n = 0;
-	cin >> n;
-	while (n != 0)
+	int n;
+	while (cin >> n, n)
 	{
-		int cnt = 0;
-		for (int i = 0; i < n; i++)
+		for (int i = 1; i <= n; i++)
 		{
-			for (int j = 0; j < n; j++)
+			for (int j = 1; j <= n; j++)
 			{
-				int cnt = 0;
-				while (1)
-				{
-					if (i == cnt || i == n - 1 - cnt || j == cnt || j == n - 1 - cnt)
-					{
-						printf("%d ", cnt + 1);
-						break;
-					}
-					cnt++;
-				}
+				int up = i, down = n - i + 1, left = j, right = n - j + 1;
+				cout << min(min(up, down), min(left, right)) << ' ';
 			}
-			printf("\n");
+			cout << endl;
 		}
-		printf("\n");
-		cin >> n;
+
+		cout << endl;
 	}
 	return 0;
 }
+
 /*
 1 1 1 1 1 1 1 1
 1 2 2 2 2 2 2 1

@@ -1,4 +1,4 @@
-#include <cstdio>
+﻿#include <cstdio>
 #include <iostream>
 using namespace std;
 int main()
@@ -69,6 +69,5 @@ int main()
 			cout << "TRIANGULO ISOSCELES" << endl;
 		}
 	}
-	
 	return 0;
 }
